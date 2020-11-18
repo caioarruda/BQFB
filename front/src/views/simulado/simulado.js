@@ -77,7 +77,6 @@ const Simulado = () => {
     const carregarVestibulares = () => {
         try {
             carregado = true;
-            dispatch({ type: 'set', carregando: true });
             fetch("http://prontdoc.com.br:3001/vestibulares").then(resp => {
                 return resp.text();
             }).then(response => {
