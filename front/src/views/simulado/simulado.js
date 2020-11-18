@@ -134,7 +134,7 @@ const Simulado = () => {
     const verificaSimuladoAberto = () => {
         let simuladoStorage = localStorage.getItem("simulado");
         simuladoStorage = JSON.parse(simuladoStorage);
-        if (simuladoStorage && !simulado.id) {
+        if (simuladoStorage && !simulado.id && vestibulares) {
             preencherSimulado(simuladoStorage);
 
         }
