@@ -45,7 +45,7 @@ const Resultado = () => {
                 body: JSON.stringify({ id: simuladoAux.id })
             };
 
-            var req = new Request('http://localhost:3001/simulados/calcular', init);
+            var req = new Request('http://prontdoc.com.br:3001/simulados/calcular', init);
 
             fetch(req).then(resp => {
                 return resp.text();

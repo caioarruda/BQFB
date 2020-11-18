@@ -12,12 +12,11 @@ import {
 } from '@coreui/react'
 import Contador from "./contador"
 import { Redirect } from 'react-router-dom'
-let carregado = false;
 let questaoCarregada = {};
 let respostaInserida = "";
 let proximoID = "";
 let proximaQuestao = {};
-
+let carregado = false;
 
 const Questao = () => {
     const dispatch = useDispatch();
@@ -44,7 +43,7 @@ const Questao = () => {
             } else {
                 proximoID = "";
             }
-            fetch("http://localhost:3001/questoes/" + questao.id).then(resp => {
+            fetch("http://prontdoc.com.br:3001/questoes/" + questao.id).then(resp => {
                 return resp.text();
             }).then(response => {
                 let dados = JSON.parse(response);
@@ -190,7 +189,7 @@ const Questao = () => {
             body: JSON.stringify(simulado)
         };
 
-        var req = new Request('http://localhost:3001/simulados/update', init);
+        var req = new Request('http://prontdoc.com.br:3001/simulados/update', init);
 
         fetch(req).then(resp => {
             return resp.text();

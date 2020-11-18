@@ -55,7 +55,7 @@ const Simulado = () => {
                     })
                 };
 
-                var req = new Request('http://localhost:3001/simulados/criar', init);
+                var req = new Request('http://prontdoc.com.br:3001/simulados/criar', init);
 
                 fetch(req).then(resp => {
                     return resp.text();
@@ -78,7 +78,7 @@ const Simulado = () => {
         try {
             carregado = true;
             dispatch({ type: 'set', carregando: true });
-            fetch("http://localhost:3001/vestibulares").then(resp => {
+            fetch("http://prontdoc.com.br:3001/vestibulares").then(resp => {
                 return resp.text();
             }).then(response => {
                 let dados = JSON.parse(response);

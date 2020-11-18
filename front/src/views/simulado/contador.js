@@ -1,16 +1,7 @@
 import React from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
-import {
-    CButton,
-    CCard,
-    CCardBody,
-    CCardHeader,
-    CCardFooter,
-    CCol,
-    CRow
-} from '@coreui/react'
-import { cilArrowThickBottom } from '@coreui/icons';
+
 
 
 const diferencaDatas = (inicio, fim) => {
