@@ -82,15 +82,15 @@ const Simulados = () => {
                 let todos = [];
                 for (let res of dados.resultado) {
                     let data = formataData(new Date(res.data));
-                    let icon = (<CIcon size={'6xl'} name="cil-check-circle" className="text-white"></CIcon>);
+                    let icon = (<CIcon size={'6xl'} name="cil-check-circle" className="text-success"></CIcon>);
                     if (res.aproveitamento < 50) {
                         icon = (<CIcon size={'6xl'} name="cil-x-circle" className="text-danger" ></CIcon>);
                     }
                     let resposta = (
                         <>
                             <CCol lg="6" md="4" sm="4" >
-                                <CCard color={"gradient-info"} className="text-white">
-                                    <CCardHeader  >
+                                <CCard >
+                                    <CCardHeader color={"gradient-info"} className="text-white" >
                                         <b>Resultado: {data}</b>
                                     </CCardHeader>
                                     <CCardBody className="d-flex justify-content-center" >
