@@ -1,3 +1,3 @@
 module.exports = {
-    uri: "mongodb://prontdoc.com.br:27017/bq"
+    uri: "mongodb://localhost:27017/bq"
 };
