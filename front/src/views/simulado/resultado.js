@@ -54,7 +54,7 @@ const Resultado = () => {
                 if (dados && dados.status === 200, dados.resultado) {
                     carregado = true;
                     let res = dados.resultado;
-                    let icon = (<CIcon size={'6xl'} name="cil-check-circle" className="text-white"></CIcon>);
+                    let icon = (<CIcon size={'6xl'} name="cil-check-circle" className="text-success"></CIcon>);
                     if (res.aproveitamento < 50) {
                         icon = (<CIcon size={'6xl'} name="cil-x-circle" className="text-danger" ></CIcon>);
                     }
@@ -66,7 +66,7 @@ const Resultado = () => {
                                 <p> Média: {formataSegundos(res.tempoMedio)}</p>
                                 <p> Nº de Questões: {res.qtdQuestoes}</p>
                                 <p> Nº de Acertos: {res.qtdAcertos}</p>
-                                <p> Aproveitamento: {res.aproveitamento.toFixed(2)}</p>
+                                <p> Aproveitamento: {res.aproveitamento.toFixed(2)}%</p>
                             </CCol>
                         </>
                     );
