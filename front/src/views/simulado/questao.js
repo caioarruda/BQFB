@@ -129,7 +129,7 @@ const Questao = () => {
                         <CCol>
                             <CCard >
                                 <CCardHeader color={"gradient-info"} className="text-white" >
-                                    <b>resolução:</b><br />
+                                    <b>Resolução:</b><br />
                                 </CCardHeader>
                                 <CCardBody>
                                     {resolucao}

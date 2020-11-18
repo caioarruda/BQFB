@@ -93,8 +93,8 @@ const Resultado = () => {
         <>
             <CRow className="d-flex justify-content-center">
                 <CCol lg="6" md="4" sm="4" >
-                    <CCard color={"gradient-info"} className="text-white">
-                        <CCardHeader  >
+                    <CCard  >
+                        <CCardHeader color={"gradient-info"} className="text-white">
                             <b>Resultado:</b>
                         </CCardHeader>
                         <CCardBody className="d-flex justify-content-center" >
