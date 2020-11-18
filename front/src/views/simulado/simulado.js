@@ -85,7 +85,14 @@ const Simulado = () => {
                     let lista = document.getElementById("vestibulares");
 
                     for (let v in dados.vestibulares) {
+                        let jaExiste = false;
                         let qtd = dados.vestibulares[v];
+                        for (i = 0; i < document.getElementById("vestibulares").length; ++i) {
+                            if (document.getElementById("vestibulares").options[i].text == v + " (" + qtd + " questões)") {
+                                jaExiste = true;
+                            }
+                        }
+                        if (jaExiste) continue;
                         let option = document.createElement("option"); //"<option value=\"" + v + "\"}>" + v + "</option>";
                         option.text = v + " (" + qtd + " questões)";
                         option.value = qtd;
