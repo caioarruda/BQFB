@@ -26,13 +26,13 @@ npm start
 ```
 ## Prints
 <p align="center">
-  <img src="http://prontdoc.com.br:3000/prints/1.jpeg" />
-  <img src="http://prontdoc.com.br:3000/prints/2.jpeg" />
-  <img src="http://prontdoc.com.br:3000/prints/3.jpeg" />
-  <img src="http://prontdoc.com.br:3000/prints/4.jpeg" />
-  <img src="http://prontdoc.com.br:3000/prints/5.jpeg" />
-  <img src="http://prontdoc.com.br:3000/prints/6.jpeg" />
-  <img src="http://prontdoc.com.br:3000/prints/7.jpeg" />
+  <img src="http://prontdoc.com.br:3000/prints/1.jpeg" width="200" height="400"/>
+  <img src="http://prontdoc.com.br:3000/prints/2.jpeg" width="200" height="400" />
+  <img src="http://prontdoc.com.br:3000/prints/3.jpeg" width="200" height="400"/>
+  <img src="http://prontdoc.com.br:3000/prints/4.jpeg" width="200" height="400"/>
+  <img src="http://prontdoc.com.br:3000/prints/5.jpeg" width="200" height="400"/>
+  <img src="http://prontdoc.com.br:3000/prints/6.jpeg" width="200" height="400"/>
+  <img src="http://prontdoc.com.br:3000/prints/7.jpeg" width="200" height="400"/>
 </p>
 
 ## License
