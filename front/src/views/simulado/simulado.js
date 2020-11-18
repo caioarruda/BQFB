@@ -87,7 +87,7 @@ const Simulado = () => {
                     for (let v in dados.vestibulares) {
                         let jaExiste = false;
                         let qtd = dados.vestibulares[v];
-                        for (i = 0; i < document.getElementById("vestibulares").length; ++i) {
+                        for (let i = 0; i < document.getElementById("vestibulares").length; ++i) {
                             if (document.getElementById("vestibulares").options[i].text == v + " (" + qtd + " questões)") {
                                 jaExiste = true;
                             }
