@@ -77,7 +77,67 @@ routes.get("/simulados", SimuladosController.retornarSimulados);
 */
 
 ```
+## Schemas
 
+# Modelo de dados Questões 
+```javascript
+const QuestoesSchema = new mongoose.Schema(
+    {
+        "id": String,
+        "materia": String,
+        "vestibular": String,
+        "resolucao": String,
+        "enunciado": String,
+        "numeroQuestao": Number,
+        "ano": Number,
+        "alternativas": [
+            {
+                "letra": String,
+                "correta": Boolean,
+                "texto": String
+            }
+        ],
+        "disponivel": Boolean
+    }
+);
+```
+
+# Modelo de dados Simulados 
+```javascript
+const SimuladosSchema = new mongoose.Schema(
+    {
+        "sessao": String,
+        "id": String,
+        "username": String,
+        "quantidade": Number,
+        "questoes": [
+            {
+                "id": String,
+                "inicio": Date,
+                "fim": Date,
+                "tempo": Number,
+                "resposta": String,
+                "correta": String
+            }
+        ],
+        "finalizado": Boolean
+    }
+);
+```
+
+# Modelo de dados Resultados 
+```javascript
+    let resultado = {
+        id: Number,
+        data: Date,
+        username: String,
+        qtdQuestoes: Number,
+        qtdAcertos: Number,
+        tempoTotal: Number,
+        tempoMedio: Number,
+        aproveitamento: Number,
+    };
+```
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
