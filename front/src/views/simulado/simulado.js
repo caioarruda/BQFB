@@ -83,9 +83,7 @@ const Simulado = () => {
                 let dados = JSON.parse(response);
                 if (dados && dados.status === 200 && dados.vestibulares) {
                     let lista = document.getElementById("vestibulares");
-                    lista.childNodes.forEach((v, k) => {
-                        lista.remove(k);
-                    })
+
                     for (let v in dados.vestibulares) {
                         let qtd = dados.vestibulares[v];
                         let option = document.createElement("option"); //"<option value=\"" + v + "\"}>" + v + "</option>";
