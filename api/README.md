@@ -79,7 +79,7 @@ routes.get("/simulados", SimuladosController.retornarSimulados);
 ```
 ## Schemas
 
-# Modelo de dados Questões 
+### Modelo de dados Questões 
 ```javascript
 const QuestoesSchema = new mongoose.Schema(
     {
@@ -102,7 +102,7 @@ const QuestoesSchema = new mongoose.Schema(
 );
 ```
 
-# Modelo de dados Simulados 
+### Modelo de dados Simulados 
 ```javascript
 const SimuladosSchema = new mongoose.Schema(
     {
@@ -125,7 +125,7 @@ const SimuladosSchema = new mongoose.Schema(
 );
 ```
 
-# Modelo de dados Resultados 
+### Modelo de dados Resultados 
 ```javascript
     let resultado = {
         id: Number,
