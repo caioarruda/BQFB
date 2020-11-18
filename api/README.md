@@ -27,8 +27,6 @@ npm run dev
 
 ## Endpoints
 
-Inicializar o servidor de desenvolvimento.
-
 ```javascript
 
 routes.get("/questoes/:id", QuestoesController.getAll);
