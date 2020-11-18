@@ -98,7 +98,6 @@ const Simulado = () => {
             });
         }
         catch (err) {
-            dispatch({ type: 'set', carregando: false });
         }
     }
     const definirMaximo = (max) => {
@@ -159,10 +158,10 @@ const Simulado = () => {
                                 vestibular = e.target.selectedOptions[0].text;
                                 vestibular = vestibular.split("(")[0].trim();
                                 definirMaximo(e.target.value);
-                            }} custom placeholder="Selecione o Vestibular" style={{ display: carregando ? 'none' : 'block' }}>
+                            }} custom placeholder="Selecione o Vestibular" style={{ display: !vestibulares ? 'none' : 'block' }}>
                                 <option disabled selected value> Selecione... </option>
                             </CSelect>
-                            <CLabel style={{ display: !carregando ? 'none' : 'block' }}>Carregando Lista de Vestibulares</CLabel>
+                            <CLabel style={{ display: vestibulares ? 'none' : 'block' }}>Carregando Lista de Vestibulares</CLabel>
                         </CFormGroup>
                         <CFormGroup onSubmit={criar}>
                             <CLabel htmlFor="c1"  >Quantidade de Questões:</CLabel>
