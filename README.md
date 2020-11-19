@@ -3,7 +3,7 @@
 Projeto com objetivo de demonstrar a capacidade técnica do desenvolvedor.
 link: http://prontdoc.com.br:3000/
 
-## Pré-Requisito
+## Pré-Requisitos
 
 1. Instalado o MongoDB
 2. Configurar a conexão com o banco.
