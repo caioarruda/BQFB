@@ -12,9 +12,7 @@ class App {
         this.cors();
         this.routes();
 
-        this.express.listen(3001, () =>
-            console.log(`Sua API REST está funcionando na porta 3001 `)
-        );
+        this.express.listen(3001);
     }
 
     database() {

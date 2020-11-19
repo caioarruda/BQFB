@@ -17,6 +17,7 @@
 /src/coreui-new
 /src/coreui-icons
 /src/coreui-charts
+/node_modules
 
 # misc
 .DS_Store

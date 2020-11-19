@@ -44,13 +44,14 @@ class QuestoesController {
     }
 
     async retornarListaVestibulares(req, res) {
-        const data = await Questoes.find({ disponivel: true });
+        const data = await Questoes.aggregate([{
+            $match: { disponivel: true }
+        }, {
+            $group: { _id: "$vestibular", count: { $sum: 1 } }
+        }]);
         let vestibulares = {}
-        for (let questao of data) {
-            if (!vestibulares[questao.vestibular]) {
-                vestibulares[questao.vestibular] = 0;
-            }
-            vestibulares[questao.vestibular] += 1;
+        for (let v of data) {
+            vestibulares[v._id] = v.count;
         }
         let resp = {
             status: 200,
