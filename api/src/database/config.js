@@ -1,3 +1,3 @@
 module.exports = {
-    uri: "mongodb://127.0.0.1:27017/bq"
+    uri: "mongodb://34.203.20.22:27017/bq"
 };
