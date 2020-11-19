@@ -168,11 +168,11 @@ const Questao = () => {
         } else {
             dispatch({
                 type: "set",
-                redirecionar: (<Redirect to="/resultado" />),
                 questao: {},
                 carregando: false,
                 questaoMontada: "",
                 respostaResolucao: "",
+                redirecionar: (<Redirect to="/resultado" />),
             });
         }
     }

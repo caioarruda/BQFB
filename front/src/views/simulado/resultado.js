@@ -70,6 +70,7 @@ const Resultado = () => {
                             </CCol>
                         </>
                     );
+                    carregado = false;
                     dispatch({
                         type: "set",
                         resultado: resposta,

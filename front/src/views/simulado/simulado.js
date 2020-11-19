@@ -23,6 +23,7 @@ const Simulado = () => {
     const dispatch = useDispatch();
     const carregando = useSelector(state => state.carregando);
     const username = useSelector(state => state.username);
+    const resultado = useSelector(state => state.resultado);
     const simulado = useSelector(state => state.simulado);
     const criando = useSelector(state => state.criando);
     const vestibulares = useSelector(state => state.vestibulares);
@@ -101,7 +102,7 @@ const Simulado = () => {
                         }
                     }
                 }
-                dispatch({ type: 'set', carregando: false, vestibulares: true });
+                dispatch({ type: 'set', carregando: false, vestibulares: true, resultado: false });
             });
         }
         catch (err) {
