@@ -8,7 +8,7 @@ class QuestoesController {
                 message: "1 nova questão foi inserida!"
             }
             // const fs = require('fs');
-            // let rawdata = fs.readFileSync(__dirname + "/../../questoes.json");
+            // let rawdata = fs.readFileSync(__dirname + "/../../all.json");
             // let obj = JSON.parse(rawdata);
             let obj = req.body;
             if (Array.isArray(obj)) {
@@ -64,7 +64,7 @@ class QuestoesController {
     async getQuestions(qtd, vestibular) {
         let pesquisa = [];
         for (let i = 0; i < qtd; i++) {
-            let questao = await Questoes.findOne({ vestibular: vestibular, disponivel: true }).skip(parseInt(i));
+            let questao = await Questoes.findOne({ vestibular: vestibular, disponivel: true }, { id: 1 }, { skip: i });
             let questaoAux = {
                 "id": questao.id,
                 "inicio": null,
@@ -72,6 +72,7 @@ class QuestoesController {
                 "tempo": 0,
                 "resposta": ""
             };
+
             pesquisa.push(questaoAux);
         }
         return pesquisa;
@@ -80,4 +81,4 @@ class QuestoesController {
 
 
 
-module.exports = new QuestoesController();
+module.exports = QuestoesController;

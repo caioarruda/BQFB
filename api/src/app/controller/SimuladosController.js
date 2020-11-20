@@ -1,8 +1,11 @@
 const Simulados = require("../model/Simulados");
-const QuestoesController = require("../controller/QuestoesController");
-
 
 class SimuladosController {
+
+    constructor(Questoes) {
+        this.Questoes = Questoes;
+    }
+
     /*
     body: { quantidade: Number, vestibular: string, sessao: string, username: string }
     ----------------------------
@@ -16,14 +19,15 @@ class SimuladosController {
             let dados = req.body;
             let id = getId();
             dados.id = id;
-            dados.questoes = await QuestoesController.getQuestions(dados.quantidade, dados.vestibular);
-            await Simulados.create(dados);
-            let resp = {
-                status: 200,
-                message: "Novo Simulado Iniciado: " + dados.sessao,
-                simulado: dados
-            }
-            return res.json(resp);
+            dados.questoes = await this.Questoes.getQuestions(dados.quantidade, dados.vestibular);
+            return Simulados.create(dados).then(() => {
+                let resp = {
+                    status: 200,
+                    message: "Novo Simulado Iniciado: " + dados.sessao,
+                    simulado: dados
+                }
+                return res.json(resp);
+            });
         } catch (err) {
             return res.json({
                 status: 500,
@@ -165,4 +169,4 @@ const calcularAproveitamento = (simulado) => {
     resultado.aproveitamento = resultado.qtdAcertos * 100 / resultado.qtdQuestoes;
     return resultado;
 }
-module.exports = new SimuladosController();
+module.exports = SimuladosController;

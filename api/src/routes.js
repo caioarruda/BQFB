@@ -3,19 +3,21 @@ const express = require("express");
 const routes = express.Router();
 const QuestoesController = require("./app/controller/QuestoesController");
 const SimuladosController = require("./app/controller/SimuladosController");
+const Questoes = new QuestoesController();
+const Simulados = new SimuladosController(Questoes);
 
-routes.get("/questoes/:id", QuestoesController.getAll);
+routes.get("/questoes/:id", Questoes.getAll.bind(Questoes));
 
-routes.post("/questoes", QuestoesController.insert);
+routes.post("/questoes", Questoes.insert.bind(Questoes));
 
-routes.get("/vestibulares", QuestoesController.retornarListaVestibulares);
+routes.get("/vestibulares", Questoes.retornarListaVestibulares.bind(Questoes));
 
-routes.post("/simulados/criar", SimuladosController.criarSimulado);
+routes.post("/simulados/criar", Simulados.criarSimulado.bind(Simulados));
 
-routes.post("/simulados/update", SimuladosController.salvarSimulado);
+routes.post("/simulados/update", Simulados.salvarSimulado.bind(Simulados));
 
-routes.post("/simulados/calcular", SimuladosController.calcularSimulado);
+routes.post("/simulados/calcular", Simulados.calcularSimulado.bind(Simulados));
 
-routes.get("/simulados", SimuladosController.retornarSimulados);
+routes.get("/simulados", Simulados.retornarSimulados.bind(Simulados));
 
 module.exports = routes;
