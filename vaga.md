@@ -25,7 +25,7 @@ Somos uma empresa de pequeno que atua nos ramos de desenvolvimento, automação 
 ## Contrato: 
     Temporário com possibilidade de efetivação( CLT ou PJ ).
 
-## Carga horário: 
+## Carga horária: 
     part-time no escritório e part-time home-office
 
 ## Remuneração: 
